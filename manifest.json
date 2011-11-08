@@ -1,0 +1,24 @@
+{
+	"name" : "Tweet From Hacker News",
+	"version" : "0.1",
+	"description" : "Tweet articles directly from Hacker News",
+	"icons" : {
+		  "16" : "icon_16.png",
+		  "48" : "icon_48.png",
+		  "128" : "icon_128.png"
+		  },
+	"page_action": {
+			  "default_icon" : "icon_16.png",
+			  "default_title" : "Tweet a link!"
+			},
+	"permissions" : [
+		      "tabs"
+		      ],
+	"content_scripts" : [
+			  {
+				"matches" : ["http://news.ycombinator.com/*","https://news.ycombinator.com/*"],
+				"js" : ["content_script.js"]
+			}
+			]
+
+}		  
